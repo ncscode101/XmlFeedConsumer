@@ -26,3 +26,17 @@ env
 XML_FEED_URL=https://example.com/your-feed-url
 ```
 
+#Usage
+```
+Initialize Service
+$xmlFeedService = app(\ncscode101\XmlFeedConsumer\Services\XmlFeedService::class);
+
+// Fetch the XML data from the service
+$xmlData = $xmlFeedService->fetchFeed();
+
+// Parse the XML data into an array
+$xmlFileData = json_decode(json_encode(simplexml_load_string($xmlData, 'SimpleXMLElement', LIBXML_NOCDATA)), true);
+
+// Return the parsed data as JSON response
+return response()->json($xmlFileData);
+```
