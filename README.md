@@ -11,6 +11,9 @@ Add the repository to your composer.json:
     }
 ],
 ```
+```
+composer require ncscode101/xml-feed-consumer
+```
 
 ## Publish Config
 ```
