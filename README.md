@@ -1,5 +1,6 @@
 # XmlFeedConsumer
 A Laravel package to consume XML feed
+Laravel version ^10
 
 Add the repository to your composer.json:
 
